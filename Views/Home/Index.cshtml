@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="main">
+        <div class="box">
+            <form action="/" method="post">
+            <input type="submit" name="name" value="Crack a Joke Buddy" />    
+            </form>
+
+            @{
+                if(ViewData["setup"] != null || ViewData["delivery"] != null){
+
+                    if (ViewData["setup"] != null)
+                    {
+                        <p><b>Setup :: </b>@ViewData["setup"]</p>
+                    }
+
+                    if (ViewData["delivery"] != null)
+                    {
+                        <p><b>Delivery :: </b>@ViewData["delivery"]</p>
+                    }
+
+                }
+                
+            }
+            <p>
+                Welcome to the Witty World
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
